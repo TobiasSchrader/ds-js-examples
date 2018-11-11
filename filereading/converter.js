@@ -7,6 +7,13 @@ document.addEventListener("DOMContentLoaded", function() {
 
 function dateiauswahl(evt) {
 	let file = evt.target.files[0];
-	console.log(file);
-	document.getElementById("output").innerHTML = file.name;
-console.log(file);}
+	let reader = new FileReader();
+	reader.onload = function() {
+		console.log("read")
+		document.getElementById("output").innerHTML = reader.result;
+	}
+	reader.onerror = function() {
+		console.log("Error: " + reader.Error);
+	}
+	reader.readAsText(file);
+	}
