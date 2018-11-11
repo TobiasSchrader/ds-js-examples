@@ -94,7 +94,7 @@ window.onload = function() { // Anonymous function defines a local scope
         // We place the number in a <span> to make it styleable.
         var span = document.createElement("span");
         span.className = "TOCSectNum";            
-        span.innerHTML = sectionNumber;                
+        span.innerHTML = sectionNumber+" ";		
         heading.insertBefore(span, heading.firstChild);
 
         // Wrap the heading in a named anchor so we can link to it.
@@ -116,5 +116,4 @@ window.onload = function() { // Anonymous function defines a local scope
         // And add the div to the TOC container.
         toc.appendChild(entry);
     }
-	console.log(JSON.stringify(toc));
 };
