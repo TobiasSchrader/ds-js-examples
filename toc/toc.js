@@ -1,3 +1,5 @@
+// This code is from the book JavaScript: The Definitive Guide, 6th Edition,
+// (ISBN #978-0596805524). Copyright 2011 by David Flanagan.
 /*
  * TOC.js: create a table of contents for a document.
  * 
