@@ -9,11 +9,9 @@ function dateiauswahl(evt) {
 	let file = evt.target.files[0];
 	let reader = new FileReader();
 	reader.onload = function() {
-		console.log("read")
-		document.getElementById("output").innerHTML = reader.result;
+		console.log("read");
+		let content = XLSX.read(reader.result, {type: 'binary'});
+		document.getElementById("output").innerHTML = JSON.stringify(content);
 	}
-	reader.onerror = function() {
-		console.log("Error: " + reader.Error);
-	}
-	reader.readAsText(file);
+	reader.readAsBinaryString(file);
 	}
