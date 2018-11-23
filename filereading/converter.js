@@ -23,7 +23,7 @@ function dateiauswahl(evt) {
 		let currentLine=0;
 		let line;
 		let table = tableObject.Sheets.Tabelle1;
-		Object.keys(table).forEach( function(entry) {
+		for (let entry in table) {
 			let entryLine=getLine(entry);
 			if (entryLine > currentLine) {
 				msg_textarea("created new line");
