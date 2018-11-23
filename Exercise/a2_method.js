@@ -1,4 +1,4 @@
-"use strict";
+"use strict"
 
 let martin = { name: "Martin Schulte",
           firma: {
@@ -9,19 +9,21 @@ let martin = { name: "Martin Schulte",
             }
           },
           verein: null,
-        show_name: function(obj) {
-			for ( let key in obj ) {
-				if ( typeof obj[key] === "object" ) {
-					this.show_name( obj[key] );
-				} else if ( key === "name" ) {
-					console.log( obj[key] );
-			}
-			}
-		},
-		setVerein: function(name, ort) {
-			this.verein = {name: name, ort:ort};
-		},		
+		  
+    setVerein: function(name, ort) {
+        this.verein = {name: name, ort:ort};
+    },		
 }
 martin.show_name(martin);
 martin.setVerein("GUUG","Essen");
 martin.show_name(martin);
+
+function show_name( obj ) {
+  for ( let key in obj ) {
+    if ( typeof obj[key] === "object" ) {
+      show_name( obj[key] );
+    } else if ( key === "name" ) {
+      console.log( obj[key] );
+    }
+  }
+}
