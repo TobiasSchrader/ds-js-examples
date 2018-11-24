@@ -10,5 +10,5 @@ xhttp.onreadystatechange = function() {
 //  }
 };
 
-xhttp.open( "GET", "http://schulte.lxht.de/cgi/person.sh?99", true );
+xhttp.open( "GET", "http://schulte.lxht.de/cgi/person.sh?7", true );
 xhttp.send();
